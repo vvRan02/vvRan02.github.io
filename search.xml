@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>前端实验一：函数的应用</title>
+      <link href="/2024/04/07/front-test01/"/>
+      <url>/2024/04/07/front-test01/</url>
+      
+        <content type="html"><![CDATA[<h1 id="源码"><a href="#源码" class="headerlink" title="源码"></a>源码</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//219970525孙薇</span></span><br><span class="line"><span class="meta">&quot;use strict&quot;</span>;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 1、编写代码调用函数 记录调用的代码和结果在实验报告中</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">getSum</span>(<span class="params">num1, num2</span>)&#123;</span><br><span class="line">  <span class="keyword">var</span> sum = num1 + num2;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(num1 + <span class="string">&quot;+&quot;</span> + num2 + <span class="string">&quot;=&quot;</span> + (num1+num2));</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">getSum</span>(<span class="number">1</span>,<span class="number">2</span>);</span><br><span class="line"><span class="comment">// 结果:1+2=3</span></span><br></pre></td></tr></table></figure><h4 id="运行效果"><a href="#运行效果" class="headerlink" title="运行效果"></a><strong>运行效果</strong></h4><p><img src="https://img2.imgtp.com/2024/04/07/QWk8gxaA.png" alt="运行效果-&gt;1"></p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 2、运行如下代码 正确记录结果 报错修改代码 记录原因</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="comment">// 代码报错：报错显示getProduct不是一个函数</span></span><br><span class="line"><span class="comment">// 原因：函数表达式的定义必须在调用之前进行</span></span><br><span class="line"><span class="title function_">getProduct</span>(<span class="number">2</span>,<span class="number">4</span>)</span><br><span class="line"><span class="keyword">var</span> getProduct=<span class="keyword">function</span> (<span class="params">num1,num2</span>)&#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(num1+<span class="string">&quot;*&quot;</span>+num2+<span class="string">&quot;=&quot;</span>+num1*num2);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 修改后：</span></span><br><span class="line"><span class="keyword">var</span> getProduct = <span class="keyword">function</span> (<span class="params">num1, num2</span>)&#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(num1 + <span class="string">&quot;*&quot;</span> + num2 + <span class="string">&quot;=&quot;</span> + num1 * num2)</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">getProduct</span>(<span class="number">2</span>,<span class="number">4</span>);</span><br><span class="line"><span class="comment">// 结果：2*4=8</span></span><br></pre></td></tr></table></figure><h4 id="运行效果-1"><a href="#运行效果-1" class="headerlink" title="运行效果"></a><strong>运行效果</strong></h4><p><img src="https://img2.imgtp.com/2024/04/07/PlE3T1qq.png" alt="运行效果-&gt;2"></p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> *  3、思考输出结果 运行记录结果</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> a = <span class="number">100</span>;</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">test</span>(<span class="params"></span>)&#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(a);</span><br><span class="line">  a = <span class="number">10</span>;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(a);</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">test</span>();</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a);</span><br><span class="line"><span class="comment">//结果：100 10 10</span></span><br></pre></td></tr></table></figure><h4 id="运行效果-2"><a href="#运行效果-2" class="headerlink" title="运行效果"></a><strong>运行效果</strong></h4><p><img src="https://img2.imgtp.com/2024/04/07/ga1t6T2k.png" alt="运行效果-&gt;3"></p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 4、思考输出结果 运行并输出结果</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> a = <span class="number">10</span>;</span><br><span class="line"><span class="title function_">fun1</span>();</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">fun1</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">var</span> b = <span class="number">20</span>;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(a);</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(b);</span><br><span class="line">  <span class="keyword">var</span> a = <span class="number">30</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//结果：undefined 20</span></span><br></pre></td></tr></table></figure><h4 id="运行效果-3"><a href="#运行效果-3" class="headerlink" title="运行效果"></a><strong>运行效果</strong></h4><p><img src="https://img2.imgtp.com/2024/04/07/Vbz9glMw.png" alt="运行效果-&gt;4"></p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 5、运行代码 看是否报错</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">fun2</span>(<span class="params">a,b</span>)&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">arguments</span>[<span class="number">0</span>]);</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">arguments</span>[<span class="number">1</span>]);</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">arguments</span>[<span class="number">2</span>]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">fun2</span>(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>);</span><br><span class="line"><span class="comment">//结果：1 2 3 （未报错）</span></span><br></pre></td></tr></table></figure><h4 id="运行效果-4"><a href="#运行效果-4" class="headerlink" title="运行效果"></a><strong>运行效果</strong></h4><p><img src="https://img2.imgtp.com/2024/04/07/4rP8iqy5.png" alt="运行效果-&gt;5"></p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 6、用for...in循环打印输出5中的fun2调用的参数</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> array = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">fun3</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i <span class="keyword">in</span> array)&#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(array[i]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">fun3</span>()</span><br><span class="line"><span class="comment">//结果：1 2 3</span></span><br></pre></td></tr></table></figure><h4 id="运行效果-5"><a href="#运行效果-5" class="headerlink" title="运行效果"></a><strong>运行效果</strong></h4><p><img src="https://img2.imgtp.com/2024/04/07/puY9G1Zo.png" alt="运行效果-&gt;6"></p><p>/**</p><ul><li>7、运行记录输出结果和原因<br>*/<br>// num=100;<br>// console.log(num);<br>//结果：num没有被定义</li></ul><p>/**</p><ul><li>8、自行编写一段严格模式下的代码记录代码说明原因<br>*/<br>// function fun4(){<br>//    a=10;<br>//    console.log(a);<br>// }<br>// fun4()<br>//报错原因：严格模式下声明变量不能省去var</li></ul><p>/**</p><ul><li>9、为8中代码添加try…catch语句 友好显示错误<br>*/<br>function fun5() {<br> try {<pre><code> a = 10;</code></pre> } catch (err) {<pre><code> console.log(&quot;错误信息：&quot; + err.message);</code></pre> } finally {<pre><code> console.log(&quot;最终都被执行&quot;);</code></pre> }<br>}</li></ul><p>fun5()<br>```</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> JavaScript </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>前端作业一：打印图形</title>
       <link href="/2024/04/07/front-work01/"/>
       <url>/2024/04/07/front-work01/</url>
@@ -70,9 +95,9 @@
     
     
     <entry>
-      <title>关于</title>
-      <link href="/about/index.html"/>
-      <url>/about/index.html</url>
+      <title>分類</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -81,9 +106,9 @@
     
     
     <entry>
-      <title>分類</title>
-      <link href="/categories/index.html"/>
-      <url>/categories/index.html</url>
+      <title>关于</title>
+      <link href="/about/index.html"/>
+      <url>/about/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -125,9 +150,9 @@
     
     
     <entry>
-      <title>电影</title>
-      <link href="/movies/index.html"/>
-      <url>/movies/index.html</url>
+      <title>音乐</title>
+      <link href="/music/index.html"/>
+      <url>/music/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -136,9 +161,9 @@
     
     
     <entry>
-      <title>音乐</title>
-      <link href="/music/index.html"/>
-      <url>/music/index.html</url>
+      <title>电影</title>
+      <link href="/movies/index.html"/>
+      <url>/movies/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
