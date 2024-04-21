@@ -1,0 +1,130 @@
+
+<head>
+    <meta charset="utf-8"/>
+    <title>让坦克开起来</title>
+    <style type="text/css">
+        input {
+            font-size: 26px;
+            margin-top: 20px;
+        }
+        body {
+            background-image: url(img/grassland.png);
+        }
+        #myTank {
+            z-index: -1;
+            position: absolute;
+            left: 10px;
+            top: 100px;
+            transition: transform 0.5s;
+        }
+        body {
+            margin: 0;
+        }
+        .tip {
+            width: 100%;
+            height: 700px;
+            background-color: rgba(0, 0, 0, 0.75);
+            position: relative;
+        }
+        .tip_into {
+            background-color: #f0f0f0;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            text-align: center;
+            width: 300px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .tip_into span {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .tip_into p {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        .tip_into button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .tip_into button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+<div class="tip">
+    <div class="tip_into">
+        <span style="color: blue;">提示:<span style="color: black;">移动键:W-上 S-下 A-左 D-右</span></span>
+        <p>点击确定开始游戏！</p>
+        <button id="begin">开始</button>
+    </div>
+</div>
+<img id="myTank" src="img/right.png"/>
+<script>
+    // 编写代码，让坦克能上下左右移动
+    let beginButton = document.getElementById("begin");
+    let tip = document.querySelector(".tip");
+    beginButton.addEventListener("click", () => {
+        tip.remove();
+        removeTank();
+    });
+    function removeTank() {
+        //获取坦克元素
+        let myTank = document.getElementById("myTank");
+        //监听键盘事件
+        window.addEventListener("keypress", (e) => {
+            //获取left
+            let left = parseFloat(getComputedStyle(myTank).left);
+            //获取top
+            let top = parseFloat(getComputedStyle(myTank).top);
+            switch (e.key) {
+                //按a左移
+                case 'a':
+                    myTank.style.transform = 'rotate(-180deg)';//逆时针旋转180度
+                    //不能超出屏幕
+                    if (left > 0) {
+                        myTank.style.left = left - 10 + 'px';//减少left向左移动
+                    }
+                    break;
+                // 按下 'd' 键，向右移动
+                case 'd':
+                    myTank.style.transform = 'rotate(0deg)'; // 旋转角度为0
+                    // 不能超出屏幕
+                    if (left < 1450) {
+                        myTank.style.left = left + 10 + 'px'; // 增加 left 值以向右移动
+                    }
+                    break;
+                // 按下 'w' 键，向上移动
+                case 'w':
+                    myTank.style.transform = 'rotate(-90deg)'; // 逆时针旋转90度
+                    // 不能超出屏幕
+                    if (top > 10) {
+                        myTank.style.top = top - 10 + 'px'; // 减少 top 值以向上移动
+                    }
+                    break;
+                // 按下 's' 键，向下移动
+                case 's':
+                    myTank.style.transform = 'rotate(90deg)'; // 顺时针旋转90度
+                    // 不能超出屏幕
+                    if (top < 610) {
+                        myTank.style.top = top + 10 + 'px'; // 增加 top 值以向下移动
+                    }
+                    break;
+                //默认
+                default:
+                    alert('只能使用WASD移动！');
+            }
+        })
+    }
+</script>
+</body>
