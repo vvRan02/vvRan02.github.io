@@ -54,6 +54,31 @@
     
     
     <entry>
+      <title>前端作业四：使用jquery操作表格</title>
+      <link href="/2024/04/21/front-work04/"/>
+      <url>/2024/04/21/front-work04/</url>
+      
+        <content type="html"><![CDATA[<head>    <meta charset="utf-8"/>    <title>jquery操作-练习4</title>    <style type="text/css">        body {            font-size: 13px;            line-height: 25px;        }        table {            border-top: 1px solid #333;            border-left: 1px solid #333;            width: 300px;        }        td {            border-right: 1px solid #333;            border-bottom: 1px solid #333;        }        .center {            text-align: center;        }    </style>    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>    <script>        function addRow() {            let newRow = $("<tr></tr>");            let col1 = $("<td>幸福从天而降</td>");            let col2 = $("<td>&yen;18.50</td>");            col2.css("text-align", "center");            newRow.append(col1, col2);            $("#myTable").append(newRow);        }        function updateRow() {            let uRow = $("#row1");            //标题行设置为字体加粗、文本居中显示，背景颜色为灰色            uRow.css("font-weight", "bold");            uRow.css("text-align", "center");            uRow.css("background-color", "#cccccc");        }        function delRow() {            let dRow = $("tr");            if (dRow[2] != null) {                dRow[2].remove(); //删除行            }        }        function copyRow() {let oldRow=$("#myTable tr:last");if (oldRow!=null){let copyRow = oldRow.clone();$("#myTable").append(copyRow);}        }    </script></head><body><table border="0" cellspacing="0" cellpadding="0" id="myTable">    <tr id="row1">        <td>书名</td>        <td>价格</td>    </tr>    <tr id="row2">        <td>看得见风景的房间</td>        <td class="center">&yen;30.00</td>    </tr>    <tr id="row3">        <td>60个瞬间</td>        <td class="center">&yen;32.00</td>    </tr></table><input name="b1" type="button" value="增加一行" onclick="addRow()"/><input name="b2" type="button" value="删除第2行" onclick="delRow()"/><input name="b3" type="button" value="修改标题样式" onclick="updateRow()"/><input name="b4" type="button" value="复制最后一行" onclick="copyRow()"/></body>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> JavaScript </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>前端作业二：使用DOM操纵图片</title>
       <link href="/2024/04/14/front-work02/"/>
       <url>/2024/04/14/front-work02/</url>
@@ -206,17 +231,6 @@
     
     
     <entry>
-      <title>留言板</title>
-      <link href="/comments/index.html"/>
-      <url>/comments/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>分類</title>
       <link href="/categories/index.html"/>
       <url>/categories/index.html</url>
@@ -233,6 +247,17 @@
       <url>/css/custom.css</url>
       
         <content type="html"><![CDATA[/* 页脚与头图透明 */#footer {    background: transparent !important;}#page-header {    background: transparent !important;}/* 白天模式遮罩透明 */#footer::before {    background: transparent !important;}#page-header::before {    background: transparent !important;}/* 夜间模式遮罩透明 */[data-theme="dark"] #footer::before {    background: transparent !important;}[data-theme="dark"] #page-header::before {    background: transparent !important;}/* 小冰分类分类磁铁黑夜模式适配 *//* 一般状态 */[data-theme="dark"] .magnet_link_context {    background: #1e1e1e;    color: antiquewhite;}/* 鼠标悬浮状态 */[data-theme="dark"] .magnet_link_context:hover {    background: LightPink;    color: #f2f2f2;}]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>留言板</title>
+      <link href="/comments/index.html"/>
+      <url>/comments/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
       
     </entry>
     
