@@ -1,0 +1,32 @@
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-sale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <title>使用jquery控制游戏角色移动</title>
+    <style>
+        body,html{
+            background-color: black;
+            margin:0;
+            padding:0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        #role{
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+<img src="player3.gif" id="role" alt="" style="width: 120px">
+<script>
+    $(document).ready(function () {
+        $(document).click(function (e){
+            $("#role").stop().animate({top:e.pageY,left:e.pageX},1000);
+        });
+    })
+</script>
+</body>

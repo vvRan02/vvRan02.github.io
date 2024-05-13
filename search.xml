@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>前端作业五：使用jquery移动游戏角色</title>
+      <link href="/2024/05/13/front-work05/"/>
+      <url>/2024/05/13/front-work05/</url>
+      
+        <content type="html"><![CDATA[<head>    <meta charset="UTF-8">    <meta name="viewport" content="width=device-width,initial-sale=1.0">    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>    <title>使用jquery控制游戏角色移动</title>    <style>        body,html{            background-color: black;            margin:0;            padding:0;            width: 100%;            height: 100%;            overflow: hidden;        }        #role{            position: absolute;            top: 0;            left: 0;        }    </style></head><body><img src="player3.gif" id="role" alt="" style="width: 120px"><script>    $(document).ready(function () {        $(document).click(function (e){            $("#role").stop().animate({top:e.pageY,left:e.pageX},1000);        });    })</script></body>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> JavaScript </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>前端实验四：制作Web页面广告</title>
       <link href="/2024/04/25/front-test04/"/>
       <url>/2024/04/25/front-test04/</url>
@@ -220,6 +245,17 @@
     
     
     <entry>
+      <title>分類</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>关于</title>
       <link href="/about/index.html"/>
       <url>/about/index.html</url>
@@ -231,9 +267,9 @@
     
     
     <entry>
-      <title>分類</title>
-      <link href="/categories/index.html"/>
-      <url>/categories/index.html</url>
+      <title>留言板</title>
+      <link href="/comments/index.html"/>
+      <url>/comments/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -247,17 +283,6 @@
       <url>/css/custom.css</url>
       
         <content type="html"><![CDATA[/* 页脚与头图透明 */#footer {    background: transparent !important;}#page-header {    background: transparent !important;}/* 白天模式遮罩透明 */#footer::before {    background: transparent !important;}#page-header::before {    background: transparent !important;}/* 夜间模式遮罩透明 */[data-theme="dark"] #footer::before {    background: transparent !important;}[data-theme="dark"] #page-header::before {    background: transparent !important;}/* 小冰分类分类磁铁黑夜模式适配 *//* 一般状态 */[data-theme="dark"] .magnet_link_context {    background: #1e1e1e;    color: antiquewhite;}/* 鼠标悬浮状态 */[data-theme="dark"] .magnet_link_context:hover {    background: LightPink;    color: #f2f2f2;}]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>留言板</title>
-      <link href="/comments/index.html"/>
-      <url>/comments/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
       
     </entry>
     
