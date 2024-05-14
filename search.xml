@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>前端作业六：使用jquery插件实现放大镜</title>
+      <link href="/2024/05/14/front-work06/"/>
+      <url>/2024/05/14/front-work06/</url>
+      
+        <content type="html"><![CDATA[<head>    <meta charset="UTF-8">    <title>放大镜插件</title>    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>    <script src="js/hc_zoom.js"></script>    <style type="text/css">        #myzoom{            width: 400px;            height:250px;            float:left;        }    </style></head><body><script type="text/javascript">    $(function (){        $("#myzoom").hc_zoom()();    });</script><div id="myzoom">    <img src="img/动物森友会广告.jpg" style="width: 400px;height: 250px"/>    <img src="img/动物森友会广告.jpg" style="display: none"/></div></body>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> JavaScript </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>前端作业五：使用jquery移动游戏角色</title>
       <link href="/2024/05/13/front-work05/"/>
       <url>/2024/05/13/front-work05/</url>
@@ -245,9 +270,9 @@
     
     
     <entry>
-      <title>分類</title>
-      <link href="/categories/index.html"/>
-      <url>/categories/index.html</url>
+      <title>关于</title>
+      <link href="/about/index.html"/>
+      <url>/about/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -256,9 +281,9 @@
     
     
     <entry>
-      <title>关于</title>
-      <link href="/about/index.html"/>
-      <url>/about/index.html</url>
+      <title>分類</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -272,17 +297,6 @@
       <url>/comments/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/css/custom.css"/>
-      <url>/css/custom.css</url>
-      
-        <content type="html"><![CDATA[/* 页脚与头图透明 */#footer {    background: transparent !important;}#page-header {    background: transparent !important;}/* 白天模式遮罩透明 */#footer::before {    background: transparent !important;}#page-header::before {    background: transparent !important;}/* 夜间模式遮罩透明 */[data-theme="dark"] #footer::before {    background: transparent !important;}[data-theme="dark"] #page-header::before {    background: transparent !important;}/* 小冰分类分类磁铁黑夜模式适配 *//* 一般状态 */[data-theme="dark"] .magnet_link_context {    background: #1e1e1e;    color: antiquewhite;}/* 鼠标悬浮状态 */[data-theme="dark"] .magnet_link_context:hover {    background: LightPink;    color: #f2f2f2;}]]></content>
       
     </entry>
     
@@ -305,6 +319,17 @@
       <url>/movies/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/css/custom.css"/>
+      <url>/css/custom.css</url>
+      
+        <content type="html"><![CDATA[/* 页脚与头图透明 */#footer {    background: transparent !important;}#page-header {    background: transparent !important;}/* 白天模式遮罩透明 */#footer::before {    background: transparent !important;}#page-header::before {    background: transparent !important;}/* 夜间模式遮罩透明 */[data-theme="dark"] #footer::before {    background: transparent !important;}[data-theme="dark"] #page-header::before {    background: transparent !important;}/* 小冰分类分类磁铁黑夜模式适配 *//* 一般状态 */[data-theme="dark"] .magnet_link_context {    background: #1e1e1e;    color: antiquewhite;}/* 鼠标悬浮状态 */[data-theme="dark"] .magnet_link_context:hover {    background: LightPink;    color: #f2f2f2;}]]></content>
       
     </entry>
     

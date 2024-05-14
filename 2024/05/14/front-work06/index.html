@@ -1,0 +1,25 @@
+
+<head>
+    <meta charset="UTF-8">
+    <title>放大镜插件</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/hc_zoom.js"></script>
+    <style type="text/css">
+        #myzoom{
+            width: 400px;
+            height:250px;
+            float:left;
+        }
+    </style>
+</head>
+<body>
+<script type="text/javascript">
+    $(function (){
+        $("#myzoom").hc_zoom()();
+    });
+</script>
+<div id="myzoom">
+    <img src="img/动物森友会广告.jpg" style="width: 400px;height: 250px"/>
+    <img src="img/动物森友会广告.jpg" style="display: none"/>
+</div>
+</body>
